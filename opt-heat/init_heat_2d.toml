@@ -1,0 +1,28 @@
+[mesh]
+dimension = 2
+division = [100, 100, 1]
+length = [1.0, 1.0, 1.0]
+type = "quad4"
+
+[boundary_condition]
+dirichlet = [
+  [[1, 0, 0, 0, 0, 0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [[0.4, 0.6], [1.0, 1.0], [0.0, 0.0]]],
+]
+
+neumann = [
+  [[0.1, 0.0, 0.0], [[0.0, 1.0], [0.0, 1.0], [0.0, 0.0]]],
+]
+
+[material]
+conductivity = [
+  #xx, yy, zz, xy, yz, xz
+  [100.0, 100.0, 0.0, 0.0, 0.0, 0.0],
+  [0.1, 0.1, 0.0, 0.0, 0.0, 0.0],
+]
+designs_0 = 0.35
+penalty = 3.0
+specific_heat = [0.0, 0.0]
+type = "Heat"
+
+[this_problem]
+filterR = 0.03

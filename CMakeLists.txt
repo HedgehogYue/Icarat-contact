@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.20)
 project(sample)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../)
 find_package(icarat REQUIRED PATHS ../../../lib/ICARAT/lib/${CACHE_COMPILER}/${CACHE_TYPE})
@@ -6,7 +6,7 @@ get_filename_component(BIN_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 # dont change above
 
 ##### add source file(s) #####
-set(SOURCES opt_macro_gcmma.cpp)
+set(SOURCES multibody_element_presetting.cpp opt_multibody.cpp selector.cpp fdm.cpp sensitivity.cpp constraint.cpp)
 ##############################
 
 # dont change below

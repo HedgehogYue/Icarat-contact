@@ -1,4 +1,4 @@
-# Install script for directory: /Users/takeshichang/Desktop/codes/ICARAT-master/sample/algorithm/opt-macro-gcmma
+# Install script for directory: /Users/takeshichang/Desktop/codes/ICARAT-master/sample/linear/opt-multibody
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/takeshichang/Desktop/codes/ICARAT-master/sample/algorithm/opt-macro-gcmma/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/takeshichang/Desktop/codes/ICARAT-master/sample/linear/opt-multibody/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

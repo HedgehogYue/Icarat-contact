@@ -102,6 +102,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake"
   "/Users/takeshichang/Desktop/codes/ICARAT-master/lib/ICARAT/lib/GNU/debug/icarat-config-noconfig.cmake"
+  "/Users/takeshichang/Desktop/codes/ICARAT-master/lib/ICARAT/lib/GNU/debug/icarat-config-release.cmake"
   "/Users/takeshichang/Desktop/codes/ICARAT-master/lib/ICARAT/lib/GNU/debug/icarat-config.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.23.2/CMakeCCompiler.cmake"
@@ -127,5 +128,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/opt-macro-gcmma.out.dir/DependInfo.cmake"
+  "CMakeFiles/opt-multibody.out.dir/DependInfo.cmake"
   )

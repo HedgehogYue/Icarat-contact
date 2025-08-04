@@ -1,24 +1,62 @@
 [mesh]
 dimension = 2
-type = "quad4"
-
-division = [100, 20, 1]
-length = [5.0, 1.0, 0.25]
+division = [100, 40, 1]
+length = [100.0, 40.0, 0.25]
+type = ["quad4"]
 
 [boundary_condition]
+# dirichlet = [[flag[x, y, z, xy, yz, zx], value[x, y, z, xy, yz, zx], [[xmin, xmax], [ymin, ymax], [zmin, zmax]]],]
 dirichlet = [
-  [[1, 1, 0, 0, 0, 0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [[0.0, 0.0], [0.0, 1.0], [0.0, 0.0]]],
-  [[1, 1, 0, 0, 0, 0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [[5.0, 5.0], [0.0, 1.0], [0.0, 0.0]]],
+  [[1, 1, 0, 0, 0, 0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [[0.0, 0.0], [0.0, 10.0], [0.0, 0.0]]],
+  [[1, 1, 0, 0, 0, 0], [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [[50.0, 50.0], [0.0, 10.0], [0.0, 0.0]]],
 ]
 
+#neumann = [[[x, y, z], [[xmin, xmax], [ymin, ymax], [zmin, zmax]]]]
 neumann = [
-  [[0.0, -1.0, 0.0], [[2.0, 3.0], [1.0, 1.0], [0.0, 10.0]]],
+  [[0.0, -0.1, 0.0], [[20.0, 30.0], [20.0, 20.0], [0.0, 0.0]]],
 ]
 
 [material]
-designs_0 = 0.5
+#design domain material parameter
+designs_0 = 1.0
 penalty = 3.0
-poisson = 0.3
+poisson = 0.25
 state = "plane_strain"
 type = "Elastic"
-young = [0.001, 70.0]
+young = [0.001, 206.0]
+
+[non_design]
+non_design_num = 1
+# meterial=[[designs, poisson, [youngs_min, youngs_max]]]
+material = [
+  [1.0, 0.3, [0.001, 70.0]],
+]
+#range=[[xmin,xmax],[ymin,ymax],[zmin,zmax]]
+range = [
+  [[20.0, 30.0], [10.0, 20.0], [0.0, 0.0]],
+]
+
+[constraint]
+constraint_num = 1
+#constraint_range=[[xmin,xmax],[ymin,ymax],[zmin,zmax]]
+constrange = [
+  [[20.0, 30.0], [10.0, 10.0], [0.0, 0.0]],
+]
+#const_max=[[x, y, z]]
+const_max = [
+  [0.0, 0.3, 0.0],
+]
+
+[this_problem]
+#filter's radius means actual distance not the number of elements
+filterR = 1.0
+#fdm= true/false
+fdm = false
+#numConst= number of the constraint function
+numConst = 2
+#typeConst= type of the extra constraint function
+#1=displacement 2=compliance
+typeConst = 1
+
+[compliance_constraint_ratio]
+ratio = 0.80
