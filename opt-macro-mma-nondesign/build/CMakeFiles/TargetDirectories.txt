@@ -1,0 +1,3 @@
+/Users/takeshichang/Desktop/codes/ICARAT-master/sample/algorithm/opt-macro-mma-nondesign/build/CMakeFiles/opt-macro-mma-nondesign.out.dir
+/Users/takeshichang/Desktop/codes/ICARAT-master/sample/algorithm/opt-macro-mma-nondesign/build/CMakeFiles/edit_cache.dir
+/Users/takeshichang/Desktop/codes/ICARAT-master/sample/algorithm/opt-macro-mma-nondesign/build/CMakeFiles/rebuild_cache.dir
